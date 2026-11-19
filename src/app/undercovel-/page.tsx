@@ -1,3 +1,1 @@
-export default function UndercovelPage() {
-  return null;
-}
+export { default } from "@/games/undercovel-/frontend/UndercovelPage";

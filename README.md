@@ -4,7 +4,8 @@ Daily puzzle games for Bruins. Three games, one person per game.
 
 | Game | URL | Owner |
 |---|---|---|
-| Undercovel | `/undercovel-` | Carter |
+| Home Page | `/home` | Anastasia |
+| Undercovel | `/undercovel` | Carter |
 | UCLA Weaver | `/uclaweaver` | Adhit |
 | Bruindle | `/bruindle` | Lucy |
 
@@ -41,15 +42,18 @@ bruingames/
 ├── supabase/migrations/   database tables (leads only)
 ├── public/                images, sounds, icons. Served as-is.
 └── src/
+    ├── home/              the site homepage (not a game)
     ├── games/             ⭐ YOUR CODE. One folder per person.
-    │   ├── undercovel-/   Carter
+    │   ├── undercovel-/   Carter (URL: /undercovel)
     │   │   ├── frontend/  what players see
     │   │   └── backend/   secret stuff (answers, saving data)
     │   ├── uclaweaver/    Adhit   (same frontend/ + backend/ inside)
     │   └── bruindle/      Lucy    (same frontend/ + backend/ inside)
-    ├── app/               connectors: one line each, links a URL to your code. Don't edit.
+    ├── app/               connectors: one line each, links a URL to its page or game code. Don't edit.
     └── shared/            Header, Footer, GameBar, Supabase, etc. Import it, don't edit it.
 ```
+
+The site homepage lives in `src/home/`; `src/app/page.tsx` connects it to `/`.
 
 ### Frontend vs. backend
 
@@ -71,7 +75,7 @@ Player types a guess  →  bruindle/frontend/Board.tsx
 
 Next.js only finds pages inside `src/app/`, and it uses **folder names as URLs**:
 `src/app/bruindle/page.tsx` becomes `/bruindle`. Each file there is a one-line **connector**
-pointing into a game folder, so you never need to touch it. The full list is in [docs/ROLES.md](docs/ROLES.md).
+pointing to the homepage or a game folder, so you never need to touch it. The full list is in [docs/ROLES.md](docs/ROLES.md).
 
 ## Tech stack
 

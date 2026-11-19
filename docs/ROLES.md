@@ -8,7 +8,7 @@ If you need something changed anywhere else, ask Carter.
 | **Carter** (lead) | Undercovel | `src/games/undercovel-/` + `public/krillion/` | TypeScript, CSS, GLSL/WGSL, Upstash Redis |
 | **Adhit** | UCLA Weaver | `src/games/uclaweaver/` | TypeScript, CSS |
 | **Lucy** | Bruindle | `src/games/bruindle/` | TypeScript, CSS |
-| **Carter** (lead) | Shared stuff | `src/shared/`, `src/app/`, `supabase/`, `.github/`, config files | Next.js, Supabase, Vercel |
+| **Carter** (lead) / **Anastasia** (lead) | Site & shared stuff | `src/home/`, `src/shared/`, `src/app/`, `supabase/`, `.github/`, config files | Next.js, Supabase, Vercel |
 
 ## Inside your folder: `frontend/` and `backend/`
 
@@ -51,11 +51,13 @@ that says "this URL shows that person's code." **Nobody edits them.** Carter set
 
 | URL | Connector | Points to |
 |---|---|---|
+| `/` | `src/app/page.tsx` | `src/home/HomePage.tsx` |
 | `/bruindle` | `src/app/bruindle/page.tsx` | `src/games/bruindle/frontend/BruindlePage.tsx` |
 | `/api/wordle/guess` | `src/app/api/wordle/guess/route.ts` | `src/games/bruindle/backend/guess.ts` |
 | `/uclaweaver` | `src/app/uclaweaver/page.tsx` | `src/games/uclaweaver/frontend/WeaverPage.tsx` |
 | `/api/weaver/puzzle` | `src/app/api/weaver/puzzle/route.ts` | `src/games/uclaweaver/backend/puzzle.ts` |
-| `/undercovel-` | `src/app/undercovel-/page.tsx` | `src/games/undercovel-/frontend/UndercovelPage.tsx` |
+| `/undercovel` | `src/app/undercovel/page.tsx` | `src/games/undercovel-/frontend/UndercovelPage.tsx` |
+| `/undercovel-` (legacy alias) | `src/app/undercovel-/page.tsx` | `src/games/undercovel-/frontend/UndercovelPage.tsx` |
 | `/api/krillion/answer` | `src/app/api/krillion/answer/route.ts` | `src/games/undercovel-/backend/answer.ts` |
 
 Need a new URL (like a second API route)? Ask Carter to add a connector.
