@@ -1,14 +1,16 @@
 .env
+.env.local
+CLAUDE.md
 node_modules/
-# Supabase
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.vercel/
+.DS_Store
 supabase/.branches
 supabase/.temp
-
-# dotenvx
 supabase/.env.keys
 supabase/.env.local
 supabase/.env.*.local
-
-# .gitignore
 supabase/functions/.env
-.env.local
